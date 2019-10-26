@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    enum GameState { PlayerControl, CowFreeFall, GameOver };
+
+    public Transform CowSpawn;
+    public List<GameObject> CowPoses;
     public bool GravityEnabled;
     private Vector3 _originalGravity;
+    private GameState _gameState = GameState.PlayerControl;
 
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         _originalGravity = Physics.gravity;
         SetGravity();
+
+
+        var newCow = Instantiate(CowPoses[Random.RandomRange(0, CowPoses.Count)]);
+        newCow.transform.position = CowSpawn.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         SetGravity();
@@ -30,5 +37,10 @@ public class GameController : MonoBehaviour
         {
             Physics.gravity = Vector3.zero;
         }
+    }
+
+    private void PinTheBase()
+    {
+
     }
 }
