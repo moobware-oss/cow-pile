@@ -415,11 +415,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a9f4559633e465b82c89699431f43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gravity: {x: 0, y: -1, z: 0}
+  Gravity: {x: 0, y: -9.8, z: 0}
   CowSpawn: {fileID: 121847908}
   CowPoses:
   - {fileID: 827162353212498794, guid: 4a888e5ae46694fa2863a0aef0f4f75b, type: 3}
+  - {fileID: 1849712012000435688, guid: 181b9de60eaa44b908c38e2c32e251f9, type: 3}
+  - {fileID: 6170862826118117513, guid: d39b7b89aaf954e59a08a064fb5a3ed8, type: 3}
   GravityEnabled: 1
+  _currentCow: {fileID: 0}
 --- !u!4 &901050635
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 06a041a44044a4fcea1019878be50adb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -544,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1167126958
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -819,7 +822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1503212525
 Transform:
   m_ObjectHideFlags: 0

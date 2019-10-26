@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8960377042586151463}
+  - component: {fileID: 3533830610847311773}
   m_Layer: 0
   m_Name: Im_A_Star_Cow
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3533830610847311773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827162353212498794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46e2680bec3f4b0cb3a8bd99d657921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseRigidBody: {fileID: 7971294190253950242}
 --- !u!1 &7971294189995911430
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public List<GameObject> CowPoses;
     public bool GravityEnabled;
 
+    public  Cow _currentCow;
+
     private GameState _gameState = GameState.PlayerControl;
 
     void Start()
@@ -22,10 +24,41 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        var left = false;
+        var right = false;
+        var fallFast = false;
+        var fallSlow = false;
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnCow();
         }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            left = true;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            right = true;
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            fallSlow = true;
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            fallFast = true;
+        }
+
+        if (_currentCow != null)
+        {
+            _currentCow.Move(left, right, fallFast, fallSlow);
+        }
+
         SetGravity();
     }
 
@@ -36,7 +69,12 @@ public class GameController : MonoBehaviour
 
     private void SpawnCow()
     {
-        var newCow = Instantiate(CowPoses[Random.RandomRange(0, CowPoses.Count)]);
+        if (_currentCow != null)
+        {
+            _currentCow.RagDoll();
+        }
+        var newCow = Instantiate(CowPoses[Random.Range(0, CowPoses.Count)]);
         newCow.transform.position = CowSpawn.position;
+        _currentCow = newCow.GetComponent<Cow>();
     }
 }

@@ -797,7 +797,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.19744715, y: -0.19287421, z: 0.48544195}
+  m_ConnectedAnchor: {x: -0.19744721, y: -0.19287421, z: 0.4854417}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -881,7 +881,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.19744724, y: 0.19286284, z: 0.48544583}
+  m_ConnectedAnchor: {x: -0.1974472, y: 0.19286284, z: 0.48544544}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1028,7 +1028,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.4658614, y: -0.16812718, z: 0.38495204}
+  m_ConnectedAnchor: {x: -1.4658614, y: -0.16812724, z: 0.38495204}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1113,7 +1113,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.4658616, y: 0.16811872, z: 0.3849566}
+  m_ConnectedAnchor: {x: -1.4658616, y: 0.16811877, z: 0.3849566}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1479,7 +1479,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.3821248, y: -0.0000016363265, z: 0.03254591}
+  m_ConnectedAnchor: {x: 0.38212493, y: -0.0000016363263, z: 0.032545887}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1637,6 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849712012000002504}
   - component: {fileID: 1849712012009827936}
+  - component: {fileID: 3261267598518009678}
   m_Layer: 0
   m_Name: Au_Naturale_Cow
   m_TagString: Cow
@@ -1679,6 +1680,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3261267598518009678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849712012000435688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46e2680bec3f4b0cb3a8bd99d657921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseRigidBody: {fileID: 1849712010685062889}
 --- !u!1 &1849712012000435690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1768,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.039743, y: 0.0000056240374, z: -0.48478386}
+  m_ConnectedAnchor: {x: -2.039743, y: 0.0000056240433, z: -0.48478433}
   m_UseSpring: 0
   m_Spring:
     spring: 10
