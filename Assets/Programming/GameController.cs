@@ -6,41 +6,37 @@ public class GameController : MonoBehaviour
 {
     enum GameState { PlayerControl, CowFreeFall, GameOver };
 
+    public Vector3 Gravity;
     public Transform CowSpawn;
     public List<GameObject> CowPoses;
     public bool GravityEnabled;
-    private Vector3 _originalGravity;
+
     private GameState _gameState = GameState.PlayerControl;
 
     void Start()
     {
-        _originalGravity = Physics.gravity;
         SetGravity();
 
-
-        var newCow = Instantiate(CowPoses[Random.RandomRange(0, CowPoses.Count)]);
-        newCow.transform.position = CowSpawn.position;
+        SpawnCow();
     }
 
     void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            SpawnCow();
+        }
         SetGravity();
     }
 
     void SetGravity()
     {
-        if (GravityEnabled && Physics.gravity != _originalGravity)
-        {
-            Physics.gravity = _originalGravity;
-        }
-        else
-        {
-            Physics.gravity = Vector3.zero;
-        }
+        Physics.gravity = Gravity;
     }
 
-    private void PinTheBase()
+    private void SpawnCow()
     {
-
+        var newCow = Instantiate(CowPoses[Random.RandomRange(0, CowPoses.Count)]);
+        newCow.transform.position = CowSpawn.position;
     }
 }
